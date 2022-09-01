@@ -1,0 +1,56 @@
+{
+  "name": "mui_boiler_plate",
+  "version": "0.1.1",
+  "private": true,
+  "homepage": "/cardholder",
+  "dependencies": {
+    "@apollo/client": "^3.3.19",
+    "@apollo/react-hooks": "^3.1.5",
+    "@date-io/date-fns": "^1.3.13",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/pickers": "^3.2.10",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "apollo-boost": "^0.4.9",
+    "apollo-link-ws": "^1.0.20",
+    "apollo-utilities": "^1.3.4",
+    "axios": "^0.19.2",
+    "date-fns": "^2.16.1",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "material-table": "^1.69.1",
+    "moment": "^2.29.1",
+    "react": "^17.0.1",
+    "react-csv": "^2.2.2",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.4",
+    "subscriptions-transport-ws": "^0.9.16"
+  },
+  "scripts": {
+    "start": "export PORT=3003 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

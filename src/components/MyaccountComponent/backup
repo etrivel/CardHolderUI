@@ -1,0 +1,214 @@
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import {
+    Container,
+    Card,
+    CardContent,
+    Typography,
+    withStyles,
+    CardHeader,
+    Avatar,
+    Grid
+} from '@material-ui/core';
+import SyncAltIcon from '@material-ui/icons/SyncAlt';
+import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
+
+const listsofuserdata = [
+    {
+        title: "Profile Details",
+        img: "https://static.toiimg.com/thumb/msid-68386125,width-800,height-600,resizemode-75,imgsize-106319,pt-32,y_pad-40/68386125.jpg",
+        usernametitle: "Name",
+        username: "Vijay Kumar",
+        usertypetitle: "User Type",
+        usertype: "FIS User",
+        useridtitle: "User ID",
+        userid: "4040120",
+        activationdatetitle: "Activation Date",
+        activationdate: "18-03-2020",
+        expirationdatetitle: "Expiration Date",
+        expirationdate: "12-11-2020"
+    },
+    {
+        title: "Profile Details",
+        img: "assets/FIS_Icon-03.svg",
+        usernametitle: "Address",
+        username: "35 , Deepanjali Soc, Marve Rd, Kharodi Malwani, Malad (west), New Mumbai, Maharashtra - 400001",
+        usertypetitle: "Mobile Number",
+        usertype: "+91 8855441122",
+        useridtitle: "Office Number",
+        userid: "022-27286609",
+        activationdatetitle: "Email ID",
+        activationdate: "Vijaykumar43@gmail.com",
+    }
+]
+
+const styles = theme => ({
+    root: {
+        width: "100%",
+        background: theme.palette.mainbackground.default,
+        opacity: 1,
+        padding: "30px 0px"
+    },
+    title: {
+        fontSize: 16,
+        fontWeight: 600,
+        color: theme.palette.secondary.main
+    },
+    card: {
+        background: theme.palette.background.paper,
+        boxShadow: "0px 5px 10px #00000014",
+        borderRadius: 16,
+        opacity: 1,
+        margin: "20px 0px",
+    },
+    card_title: {
+        borderBottom: `1px solid ${theme.palette.mainbackground.default}`,
+        fontWeight: "bold",
+        fontSize: 14,
+        [theme.breakpoints.only('xs')]: {
+            borderBottom: "1px solid #c9caca6b",
+            height: "20px",
+        }
+    },
+    card_user_title: {
+        color: theme.palette.text.secondary,
+        fontSize: 13,
+        opacity: 1,
+    },
+    card_user_dis: {
+        color: theme.palette.secondary.main,
+        fontSize: 13,
+        fontWeight: 600,
+        opacity: 1,
+    },
+    user_details: {
+        border: `1px solid ${theme.palette.text.secondary}`,
+        borderRadius: 8,
+        opacity: 0.9,
+        padding: 12,
+        marginBottom: 20
+    },
+    card_user_details_text: {
+        fontSize: 15
+    },
+    comm_icon: {
+        marginBottom: -24,
+        position: "absolute",
+        marginTop: 12,
+        marginLeft: -12,
+        color: theme.palette.primary.main,
+        fontSize: 18
+    },
+    body: {
+        padding: "20px 100px",
+        [theme.breakpoints.only('xs')]: {
+            padding: "0"
+        }
+    },
+    border: {
+        borderRight: `1px solid ${theme.palette.text.secondary}`, textAlign: "center",
+        [theme.breakpoints.only('xs')]: {
+            borderRight: "unset",
+            margin: "12px 0px"
+        }
+    },
+    profile: {
+        borderBottom: `3px solid ${theme.palette.primary.main}`,
+        background: theme.palette.background.paper,
+        boxShadow: "0px 5px 10px #00000014",
+        borderRadius: 8,
+        width: "50%",
+        margin: "auto",
+        textAlign: "center",
+        height: "50px",
+        alignItems: "center",
+        display: "flex",
+        justifyContent: "center",
+        fontWeight: 600,
+        fontSize: 15,
+        opacity: 0.8,
+        [theme.breakpoints.only('xs')]: {
+            width: "97%",
+            height: "auto",
+            padding: 6
+        }
+    },
+    phn: {
+        color: theme.palette.primary.main, marginRight: 8,
+        marginLeft: 6,
+        [theme.breakpoints.only('xs')]: {
+            marginTop: -12
+        }
+    },
+    avatar: {
+        background: theme.palette.primary.light,
+        color: theme.palette.primary.dark,
+    }
+})
+
+class MyaccountComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+    render() {
+
+        const {
+            classes
+        } = this.props;
+
+        return <div className={classes.root}>
+            <Container>
+                <Typography variant="subtitle1" className={classes.title}>My Account</Typography>
+                {listsofuserdata?.map((item, i) => {
+                    return <Card className={classes.card} variant="outlined">
+                        <CardContent className={classes.card_title}>{item.title}</CardContent>
+
+                        <Container>
+                            <div className={classes.body}>
+                                <CardHeader
+                                    style={{ padding: "20px 0px" }}
+                                    avatar={
+                                        <Avatar src={item.img} className={classes.avatar} />
+                                    }
+                                    title={<span className={classes.card_user_title}>{item.usernametitle}</span>}
+                                    subheader={<span className={classes.card_user_dis}>{item.username}</span>}
+                                />
+
+                                <div className={classes.user_details}>
+                                    <Grid container justify="center">
+                                        <Grid item xs={6} sm={i === 0 ? 2 : 3} className={classes.border}>
+                                            <Typography className={classes.card_user_title}>{item.usertypetitle}</Typography>
+                                            <Typography className={`${classes.card_user_dis} ${classes.card_user_details_text}`}>{item.usertype}</Typography>
+                                        </Grid>
+                                        <Grid item xs={6} sm={i === 0 ? 2 : 3} className={classes.border}>
+                                            <Typography className={classes.card_user_title}>{item.useridtitle}</Typography>
+                                            <Typography className={`${classes.card_user_dis} ${classes.card_user_details_text}`}>{item.userid}</Typography>
+                                        </Grid>
+                                        <Grid item xs={6} sm={i === 0 ? 2 : 3} style={{ textAlign: "center" }}>
+                                            <Typography className={classes.card_user_title}>{item.activationdatetitle}</Typography>
+                                            <Typography className={`${classes.card_user_dis} ${classes.card_user_details_text}`}>{item.activationdate}</Typography>
+                                        </Grid>
+                                        {item.expirationdatetitle && <Grid item xs={6} sm={i === 0 ? 2 : 3} style={{ textAlign: "center" }}>
+                                            <div style={{ display: "flex" }}>
+                                                <SyncAltIcon className={classes.comm_icon} />
+                                            </div>
+                                            <Typography className={classes.card_user_title}>{item.expirationdatetitle}</Typography>
+                                            <Typography className={`${classes.card_user_dis} ${classes.card_user_details_text}`}>{item.expirationdate}</Typography>
+                                        </Grid>}
+                                    </Grid>
+                                </div>
+                            </div>
+                        </Container>
+                    </Card>
+                })}
+                <div className={classes.profile}>
+                    <PhoneInTalkIcon className={classes.phn} /> For any update in profile please contact FIS Administrator
+                </div>
+            </Container>
+        </div>
+    }
+}
+
+export default withStyles(styles)(withRouter(MyaccountComponent));

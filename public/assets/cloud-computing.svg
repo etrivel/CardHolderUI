@@ -1,0 +1,11 @@
+<svg id="cloud-computing" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="114.008" height="82.955" viewBox="0 0 114.008 82.955">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4bcd3e"/>
+      <stop offset="1" stop-color="#588254"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_4368" data-name="Group 4368" transform="translate(0 0)">
+    <path id="Path_1270" data-name="Path 1270" d="M89.082,149.605H64.622V124.889h8.084a2.529,2.529,0,0,0,2.05-4.007L59.031,99.124a2.506,2.506,0,0,0-4.077,0L39.23,120.882a2.522,2.522,0,0,0,2.05,4.007h8.084v24.716h-27.4C9.737,148.929,0,137.491,0,125.1a23.207,23.207,0,0,1,11.508-20.034,15.559,15.559,0,0,1-.955-5.428A15.778,15.778,0,0,1,26.347,83.842a15.524,15.524,0,0,1,5.4.955A31.619,31.619,0,0,1,91.831,95.233c12.6,2.166,22.177,13.837,22.177,27.046C114.008,136.4,103.012,148.627,89.082,149.605Z" transform="translate(0 -66.65)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

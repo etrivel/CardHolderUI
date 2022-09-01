@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+/* this targets the default scrollbar (compulsory) */
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888 !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555 !important;
+}
+
+/* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+  background-color: #f1f1f1 !important;
+}
+
+/* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1 !important;
+}
+
+/* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #000;
+  border-radius: 10px;
+}
+
+.MuiTableCell-root {
+  padding: 0px 20px !important;
+}
+
+.MuiTableSortLabel-root:hover .MuiTableSortLabel-icon,
+.MuiTableSortLabel-root.MuiTableSortLabel-active.MuiTableSortLabel-root.MuiTableSortLabel-active .MuiTableSortLabel-icon {
+  color: #4BCD3E !important;
+  opacity: unset !important;
+}
+
+.MuiTableCell-paddingNone:last-child .MuiIconButton-root .MuiIcon-root {
+  color: #728691;
+  font-size: 20px !important;
+}
+.MuiTableCell-head{
+  height: 50px;
+  text-transform: capitalize;
+}
